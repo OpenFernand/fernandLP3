@@ -1,0 +1,169 @@
+
+/******************** Debut animation Loader Spiner *******************/
+.loader {
+    background-color: white;
+    opacity: 0.95;
+    position: fixed;
+    z-index: 999;
+    height: 100vh;
+    width: 100%;
+    transform-origin: top;
+    animation: spinner 0.9ms 2s forwards;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loader p {
+    color: $primary;
+    font-style: italic;
+    font-size: 20px;
+    transition-duration: 1s;
+}
+
+.loader .spin {
+    border: 16px solid $primary;
+    border-radius: 50%;
+    border-top: 16px solid $primary;
+    border-right: 16px solid $secondary;
+    border-bottom: 16px solid #f5abe0;
+    border-left: 16px solid #f4cae8;
+    width: 150px;
+    height: 150px;
+    animation: spinner 2s linear forwards;
+    margin-top: 200px;
+}
+
+@keyframes spinner
+{
+    0% 
+    {
+      transform: rotate(0deg);
+    }
+
+    99.999% 
+    {
+      transform: rotate(360deg);
+    }
+
+    100% 
+    {
+        opacity: 0;
+        transform: scale(1) translate(-100%, -100%);
+    }
+}
+/****************** Fin animation Loader Spinner ***********************/
+/********* Debut animation coeur PAGE ACCEUIL + PAGES MENUS ***********/
+.coeur:hover .fa-regular {
+    display: block;
+    font-weight: bold;
+    background-clip: text;
+    animation: coeur-apparait 0.7s ease-in-out;
+    /*background-image: linear-gradient(65deg, $secondary, $primary 75%);*/
+    color: $primary ;
+}
+
+@keyframes coeur-apparait
+{
+    0% 
+    {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    100% 
+    {
+      transform: scale(1.4);
+      opacity: 1;
+    }
+}
+/********* Fin animation coeur PAGE ACCEUIL + PAGES MENUS *************/
+/************** Début animation faire monter les menus  **************/
+.selection {
+    animation: monter-menu 2s;
+}
+
+.selection.Bechoix.selection.Cechoix.selection.Dechoix {
+    animation-delay: 0.3s;
+}
+
+@keyframes monter-menu 
+{
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+}
+/************** Fin animation faire monter les menus  *****************/
+/************** Début animation cocher pour ajout plats  **************/
+.choix-selection {
+    background-color: $tertiary;
+    display: flex;
+    width: 0px;
+    height: 90px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 16px 16px 0;
+    overflow: hidden; /*contenu rogné pour s'inscrire dans la boîte. 
+    aucune barre de défilement n'est affichée.*/
+    /*transition-duration: 0.5s; */
+    margin-right: 0px;
+}
+
+.selection:hover .choix-selection {
+    transition-duration: 0.5s;
+    width: 80px;
+}
+
+.selection:hover .fa-circle-check {
+    transform: rotate(-360deg);
+    transition-duration: 0.4s;
+    animation-delay: 1s;
+}
+  
+.choix-selection::after.prix {
+    position: absolute;
+    right: 100px;
+}
+  
+.selection1 {
+    flex: 1;
+    padding-left: 10px;
+}
+
+.selection2 {
+    flex: 1;
+    padding-left: 10px;
+}
+
+.selection3 {
+    flex: 1;
+    padding-left: 10px;
+}
+
+.selection4 {
+    flex: 1;
+    padding-left: 10px;
+}
+
+.prix  {
+    padding-right: 10px;
+}
+
+.choix-selection .fa-circle-check {
+    background-color: whitesmoke;
+    color:  $tertiary;
+    border-radius: 50%;
+    font-size: 32px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(1turn);
+}
+/************** Fin animation cocher pour ajout plats  **************/

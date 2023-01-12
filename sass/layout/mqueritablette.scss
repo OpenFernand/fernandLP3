@@ -1,0 +1,206 @@
+
+/************************ Fin Footer COMMUN AUX 2 PAGES ****************/
+/*********************************************************************/
+/****************** MEDIA QUERIES TABLETTE ***************************/
+/*********************************************************************/
+@media (min-width: 768px) and (max-width: 920px) {
+    body {
+      max-width: 920px;
+      font-family: "Roboto", "sans-serif";
+      color: #000000;
+      margin: auto;
+      position: relative;
+    }
+  
+    main {
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+  
+    /****************** PAGE ACCUEIL***************/
+    /*** Fonctionnement ***/
+    #section2 ul {
+      display: flex;
+      flex-direction: row;
+      margin-left: 10px;
+      height: 95%;
+      width: 90%;
+      margin: auto;
+    }
+  
+    #section2 li {
+      margin-left: 30px;
+    }
+  
+    #section2 ul .fonct {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+    }
+  
+    #section2 span {
+      position: unset;
+    }
+  
+    /*** Restaurant ***/
+    #section3 {
+      width: 100%;
+      height: 100%;
+    }
+  
+    /*** Footer ***/
+    footer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      position: relative;
+    }
+  
+    footer #proposer {
+      margin: auto;
+    }
+  
+    footer #partenaire {
+      margin: auto;
+    }
+  
+    footer #juridique {
+      margin: auto;
+    }
+  
+    footer #contact {
+      margin: auto;
+    }
+  
+    /****************** PAGE MENUS ***************/
+    .commander .commander-input {
+      width: 100%;
+      margin: 10px;
+      cursor: pointer;
+    }
+  
+    footer #proposer {
+      margin: auto;
+    }
+  
+    footer #partenaire {
+      margin: auto;
+    }
+  
+    footer #juridique {
+      margin: auto;
+    }
+  
+    footer #contact {
+      margin: auto;
+    }
+  }
+  /*********************************************************************/
+  /****************** MEDIA QUERIES DESKTOP ****************************/
+  /*********************************************************************/
+  @media (min-width: 920px) and (max-width: 1400px) {
+    body {
+      max-width: 1400px;
+      font-family: "Roboto", "sans-serif";
+      color: #000000;
+      margin: auto;
+      position: relative;
+    }
+  
+    main {
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+  
+    /****************** PAGE ACCUEIL***************/
+    /*** Fonctionnement ***/
+    #section2 ul {
+      display: flex;
+      flex-direction: row;
+      margin-left: 10px;
+      height: 95%;
+      width: 90%;
+      margin: auto;
+    }
+  
+    #section2 li {
+      margin-left: 30px;
+    }
+  
+    #section2 ul .fonct {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+    }
+  
+    #section2 span {
+      position: unset;
+    }
+  
+    /*** Restaurant ***/
+    #section3 {
+      width: 100%;
+      height: 100%;
+    }
+  
+    #section3 .Restaurants-tous {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      height: 95%;
+      width: 90%;
+      margin: auto;
+    }
+  
+    /*** Footer ***/
+    footer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      position: relative;
+    }
+  
+    footer #proposer {
+      margin: auto;
+    }
+  
+    footer #partenaire {
+      margin: auto;
+    }
+  
+    footer #juridique {
+      margin: auto;
+    }
+  
+    footer #contact {
+      margin: auto;
+    }
+  
+    /****************** PAGE MENUS ***************/
+    .commander .commander-input {
+      width: 100%;
+      border-radius: 0px;
+    }
+  
+    footer #proposer {
+      margin: auto;
+    }
+  
+    footer #partenaire {
+      margin: auto;
+    }
+  
+    footer #juridique {
+      margin: auto;
+    }
+  
+    footer #contact {
+      margin: auto;
+    }
+  }

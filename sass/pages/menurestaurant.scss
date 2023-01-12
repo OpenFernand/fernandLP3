@@ -1,0 +1,82 @@
+
+/********************* P A G E  D E S  M E N U S *********************/
+/************************ Les Menus ****************************/
+/** restaurant & coeur **/
+#tous-les-menus
+{
+    background-color: #f3f3f3;
+    position: relative;
+    width: 100%;
+    border-radius: 40px 40px 0 0;
+    padding-bottom: 64px;
+    margin-top: -90px;
+}
+
+#tous-les-menus #titre-restaurant
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "shrikhand", cursive;
+    font-size: 20px;
+    font-style: italic;
+    margin-left: 10px;
+    margin-right: 50px;
+}
+
+#tous-les-menus #titre-restaurant .coeur
+{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    right: 10%;
+    top: 2.5%;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+/** ENTREES PLATS DESSERTS**/
+.ligne-verte
+{
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-top: 8px;
+}
+
+.ligne-verte h2 
+{
+    margin: 0;
+    font-size: 18px;
+}
+
+.ligne-verte::after 
+{
+    content: "";
+    width:47px;
+    height: 8px;
+    background-color: $tertiary;
+    position: absolute;
+    margin: 0;
+}
+
+/** Nom des Plats **/
+#tous-les-menus .selection
+{
+    background-color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.25);
+    margin: 10px;
+    border-radius: 16px;
+    cursor: pointer;
+    height: 90px;
+}
+
+#tous-les-menus .prix
+{
+    font-weight: bold;
+}

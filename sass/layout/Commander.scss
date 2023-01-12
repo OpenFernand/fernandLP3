@@ -1,0 +1,29 @@
+
+/** bouton : Commander **/
+.commander 
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.commander .commander-input {
+    background-image: linear-gradient($secondary, $primary);
+    border-radius: 32px;
+    padding: 18px 40px;
+    color: white;
+    font-size: 18px;
+    border: none;
+    box-shadow: 4px 6px 8px $box-shadow;
+    filter: brightness(100%);
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 4px 6px 8px $box-shadow-hover;
+        filter: brightness(110%);
+        cursor: pointer;
+        transition: all 500ms;
+        transform: scale(1.05);
+    }
+}

@@ -1,0 +1,75 @@
+/************************ Debut Footer COMMUN AUX 2 PAGES ****************/
+footer 
+{
+    background-color: rgb(45, 43, 43);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-left: 16px;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+}
+
+footer #footer_container 
+{
+    font-family: "Shrikhand", cursive;
+    font-size: 22px;
+}
+
+footer #proposer 
+{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: -16px;
+}
+
+footer #proposer:hover 
+{
+    color: $secondary;
+}
+
+footer #partenaire 
+{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: -16px;
+}
+footer #partenaire:hover 
+{
+    color: $secondary;
+}
+
+footer #juridique
+{
+    margin-bottom: 4px;
+}
+
+footer #juridique:hover 
+{
+    color: $secondary;
+}
+
+footer #contact 
+{
+    margin-bottom: 40px;
+    text-decoration: none;
+    margin-top: 8px;
+    color: white;
+}
+
+footer #contact:hover 
+{
+    color: $secondary;
+}
+
+body 
+{
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/************************ Fin Footer COMMUN AUX 2 PAGES ****************/

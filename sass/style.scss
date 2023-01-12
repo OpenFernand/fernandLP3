@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap"); /* ANIMATION LOADING */
+
+* {
+    box-sizing: border-box;
+    box-sizing: content-box;
+}
+
+body {
+    max-width: 768px;
+    font-family: "Roboto", "sans-serif";
+    color: #000000; 
+    margin: auto;
+    position: relative;
+}
+
+main {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+@import "../sass/utils/variables.scss";
+@import "../sass/components/animation.scss";
+@import "../sass/layout/header.scss";
+@import "../sass/layout/formexplorer.scss";
+@import "../sass/layout/fonctionnement.scss";
+@import "../sass/layout/restaurant.scss";
+@import "../sass/layout/commander.scss";
+@import "../sass/layout/footer.scss";
+@import "../sass/layout/mqueritablette.scss";
+@import "../sass/pages/menurestaurant.scss";
+/*@import "../sass/layout/mqueridesktop.scss"; */

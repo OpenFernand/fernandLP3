@@ -1,0 +1,35 @@
+/************** Debut Header Commun aux 2 PAGES  *********************/
+header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    padding: 16px;
+    background-color: whitesmoke;
+}
+
+header h1 {
+    flex: 2;
+    font-family: "Shrikhand", cursive;
+    margin: 0;
+    text-align: center;
+    font-size: 32px;
+}
+/** Spécifique PAGES MENUS **/
+header .fa-arrow-left 
+{
+    flex: 1;
+    color: black;
+    font-weight: 900;
+    font-size: 24px;
+    margin-right: 20px;
+}
+
+.img_header {
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    margin-top: -50px;
+}
+/************** Fin Header Commun aux 2 PAGES  ***********************/

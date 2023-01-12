@@ -1,0 +1,111 @@
+
+/***************Section 3 Restaurants *******************/
+#section3
+{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #F2F2F2 ;
+    background-color: #f2f2f2;
+    width: 100%;
+    height: 1200px;
+    margin-top: 30px;
+}
+
+/* Cadre image */
+#section3 .Tcard
+{
+    background-color: rgb(255, 255, 255);
+    border-radius: 24px 24px 24px 24px;
+    width: 95%;
+    height: 251px;
+    cursor: pointer;
+    box-shadow: 0px 0px 15px -5px;
+    position: relative;
+    /*aspect-ratio: 9/7;*/
+    margin-bottom: 25px;
+    margin-left: 10px;
+}
+
+#section3 .Tcard .card 
+{
+    width: 100%;
+    height: 70%;
+    border-radius: 24px 24px 0 0;
+}
+
+#section3 .Tcard .card img 
+{
+    border-radius: 24px 24px 0 0;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+#section3 h2
+{
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.container
+{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 10px;
+    text-decoration: none;
+    margin-top: -25px;
+}
+
+/* nom restaurant.... */
+.container a
+{
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #181818;
+    text-decoration: none;
+}
+
+/* ville */
+.container p 
+{
+    font-size: 14px;
+    margin-top: -7px;
+    margin-left: 1px;
+    margin-bottom: 10px;
+    padding-bottom: 0;
+    color: #181818;
+}
+
+/* info Nouveau encadré */
+#section3 .Tcard .link-restaurants .status 
+{
+    position: absolute;
+    text-align: center;
+    color: #34a98c;
+    background-color: $tertiary;
+    top: 5px;
+    right: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 4px;
+}
+
+/* Coeur */
+#section3 .Tcard .coeur
+{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    right: 5%;
+    bottom: 10%;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+    font-size: 20px;
+}

@@ -1,0 +1,13 @@
+{
+  "name": "fernand-sass",
+  "version": "1.0.0",
+  "description": "Joe Blow's portfolio",
+  "main": "index.js",
+"scripts": {
+  "sass": "sass --watch ./sass/style.scss:./public/css/style.css --style expanded",
+  "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+  
+},
+"author": "",
+"license": "ISC"
+}

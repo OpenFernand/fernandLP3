@@ -1,0 +1,77 @@
+
+/*********************** P A G E  A C C U E I L **********************/
+/************************ Formulaire *********************************/
+.formulaire-conteneur {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    background-color: #eaeaea;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.1rem 0.1rem;
+    box-shadow: inset 0px 6px 6px -6px #888;
+    
+    .recherche-ville {
+        border: none;
+        background-color: #eaeaea ;
+        font-size: 16px;
+    }
+}
+
+.formulaire {
+    margin-left: 20px;
+}
+
+/*************** Section 1 Reserver le menu *******************/
+.section1
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #F2F2F2 ;
+    background-color: #f2f2f2;
+    width: 100%;
+    height: 320px;
+}
+
+.section1 h2 
+{
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 35px;
+}
+
+.section1 p
+{
+    font-size: 18px;
+    font-weight: lighter;
+    text-align: center;
+    color: grey;
+    margin-top: 1px;
+}
+
+/** bouton : Explorer nos restaurants **/
+.section1 .explore {
+    background-image: linear-gradient($secondary, $primary);
+    border-radius: 32px;
+    padding: 18px 32px;
+    color: white;
+    font-size: 18px;
+    border: none;
+    margin-top: 20px;
+    box-shadow: 4px 6px 8px $box-shadow;
+    filter: brightness(100%);
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 4px 6px 8px $box-shadow-hover;
+        filter: brightness(110%);
+        cursor: pointer;
+        transition: all 500ms;
+        transform: scale(1.05);
+    }
+}

@@ -1,0 +1,827 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
+/* ANIMATION LOADING */
+* {
+  box-sizing: border-box;
+  box-sizing: content-box;
+}
+
+body {
+  max-width: 768px;
+  font-family: "Roboto", "sans-serif";
+  color: #000000;
+  margin: auto;
+  position: relative;
+}
+
+main {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+/******************** Debut animation Loader Spiner *******************/
+.loader {
+  background-color: white;
+  opacity: 0.95;
+  position: fixed;
+  z-index: 999;
+  height: 100vh;
+  width: 100%;
+  transform-origin: top;
+  animation: spinner 0.9ms 2s forwards;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loader p {
+  color: #9356DC;
+  font-style: italic;
+  font-size: 20px;
+  transition-duration: 1s;
+}
+
+.loader .spin {
+  border: 16px solid #9356DC;
+  border-radius: 50%;
+  border-top: 16px solid #9356DC;
+  border-right: 16px solid #FF79DA;
+  border-bottom: 16px solid #f5abe0;
+  border-left: 16px solid #f4cae8;
+  width: 150px;
+  height: 150px;
+  animation: spinner 2s linear forwards;
+  margin-top: 200px;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  99.999% {
+    transform: rotate(360deg);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1) translate(-100%, -100%);
+  }
+}
+/****************** Fin animation Loader Spinner ***********************/
+/********* Debut animation coeur PAGE ACCEUIL + PAGES MENUS ***********/
+.coeur:hover .fa-regular {
+  display: block;
+  font-weight: bold;
+  background-clip: text;
+  animation: coeur-apparait 0.7s ease-in-out;
+  /*background-image: linear-gradient(65deg, $secondary, $primary 75%);*/
+  color: #9356DC;
+}
+
+@keyframes coeur-apparait {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 1;
+  }
+}
+/********* Fin animation coeur PAGE ACCEUIL + PAGES MENUS *************/
+/************** Début animation faire monter les menus  **************/
+.selection {
+  animation: monter-menu 2s;
+}
+
+.selection.Bechoix.selection.Cechoix.selection.Dechoix {
+  animation-delay: 0.3s;
+}
+
+@keyframes monter-menu {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/************** Fin animation faire monter les menus  *****************/
+/************** Début animation cocher pour ajout plats  **************/
+.choix-selection {
+  background-color: #99e2d0;
+  display: flex;
+  width: 0px;
+  height: 90px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 16px 16px 0;
+  overflow: hidden;
+                  /*contenu rogné pour s'inscrire dans la boîte. 
+aucune barre de défilement n'est affichée.*/
+  /*transition-duration: 0.5s; */
+  margin-right: 0px;
+}
+
+.selection:hover .choix-selection {
+  transition-duration: 0.5s;
+  width: 80px;
+}
+
+.selection:hover .fa-circle-check {
+  transform: rotate(-360deg);
+  transition-duration: 0.4s;
+  animation-delay: 1s;
+}
+
+.choix-selection::after.prix {
+  position: absolute;
+  right: 100px;
+}
+
+.selection1 {
+  flex: 1;
+  padding-left: 10px;
+}
+
+.selection2 {
+  flex: 1;
+  padding-left: 10px;
+}
+
+.selection3 {
+  flex: 1;
+  padding-left: 10px;
+}
+
+.selection4 {
+  flex: 1;
+  padding-left: 10px;
+}
+
+.prix {
+  padding-right: 10px;
+}
+
+.choix-selection .fa-circle-check {
+  background-color: whitesmoke;
+  color: #99e2d0;
+  border-radius: 50%;
+  font-size: 32px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(1turn);
+}
+
+/************** Fin animation cocher pour ajout plats  **************/
+/************** Debut Header Commun aux 2 PAGES  *********************/
+header {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  padding: 16px;
+  background-color: whitesmoke;
+}
+
+header h1 {
+  flex: 2;
+  font-family: "Shrikhand", cursive;
+  margin: 0;
+  text-align: center;
+  font-size: 32px;
+}
+
+/** Spécifique PAGES MENUS **/
+header .fa-arrow-left {
+  flex: 1;
+  color: black;
+  font-weight: 900;
+  font-size: 24px;
+  margin-right: 20px;
+}
+
+.img_header {
+  height: 350px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  margin-top: -50px;
+}
+
+/************** Fin Header Commun aux 2 PAGES  ***********************/
+/*********************** P A G E  A C C U E I L **********************/
+/************************ Formulaire *********************************/
+.formulaire-conteneur {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  background-color: #eaeaea;
+  text-align: center;
+  font-weight: bold;
+  padding: 0.1rem 0.1rem;
+  box-shadow: inset 0px 6px 6px -6px #888;
+}
+.formulaire-conteneur .recherche-ville {
+  border: none;
+  background-color: #eaeaea;
+  font-size: 16px;
+}
+
+.formulaire {
+  margin-left: 20px;
+}
+
+/*************** Section 1 Reserver le menu *******************/
+.section1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #F2F2F2;
+  background-color: #f2f2f2;
+  width: 100%;
+  height: 320px;
+}
+
+.section1 h2 {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 35px;
+}
+
+.section1 p {
+  font-size: 18px;
+  font-weight: lighter;
+  text-align: center;
+  color: grey;
+  margin-top: 1px;
+}
+
+/** bouton : Explorer nos restaurants **/
+.section1 .explore {
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 32px;
+  padding: 18px 32px;
+  color: white;
+  font-size: 18px;
+  border: none;
+  margin-top: 20px;
+  box-shadow: 4px 6px 8px #9e9b9b;
+  filter: brightness(100%);
+  cursor: pointer;
+}
+.section1 .explore:hover {
+  box-shadow: 4px 6px 8px #424040;
+  filter: brightness(110%);
+  cursor: pointer;
+  transition: all 500ms;
+  transform: scale(1.05);
+}
+
+/*************** Section 2 Fonctionnement *******************/
+#section2 {
+  display: flex;
+  flex-direction: column;
+}
+
+#section2 h2 {
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-left: 10px;
+}
+
+#section2 ul {
+  display: flex;
+  flex-direction: column;
+}
+
+#section2 li {
+  border-radius: 20px 20px 20px 20px;
+  background-color: #F2F2F2;
+  box-shadow: 5px 5px 5px 5px #D9D9D9;
+  width: 95%;
+  height: 70px;
+  margin-bottom: 23px;
+  display: flex;
+  align-items: center;
+}
+
+#section2 li:hover {
+  background-color: #ede0f2;
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+}
+
+#section2 span {
+  /*font-family: "Font Awesome 6 Free";*/
+  font-weight: 700;
+  position: absolute;
+  left: 1.5rem;
+  border-radius: 50%;
+  background-color: #9356DC;
+  padding: 5px 8px;
+  color: white;
+  font-size: .8rem;
+}
+
+#section2 i {
+  color: gray;
+  font-size: 20px;
+  margin-left: 30px;
+}
+
+#section2 a {
+  color: black;
+  font-size: 16px;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+/***************Section 3 Restaurants *******************/
+#section3 {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #F2F2F2;
+  background-color: #f2f2f2;
+  width: 100%;
+  height: 1200px;
+  margin-top: 30px;
+}
+
+/* Cadre image */
+#section3 .Tcard {
+  background-color: white;
+  border-radius: 24px 24px 24px 24px;
+  width: 95%;
+  height: 251px;
+  cursor: pointer;
+  box-shadow: 0px 0px 15px -5px;
+  position: relative;
+  /*aspect-ratio: 9/7;*/
+  margin-bottom: 25px;
+  margin-left: 10px;
+}
+
+#section3 .Tcard .card {
+  width: 100%;
+  height: 70%;
+  border-radius: 24px 24px 0 0;
+}
+
+#section3 .Tcard .card img {
+  border-radius: 24px 24px 0 0;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+#section3 h2 {
+  font-size: 25px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-left: 10px;
+  text-decoration: none;
+  margin-top: -25px;
+}
+
+/* nom restaurant.... */
+.container a {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #181818;
+  text-decoration: none;
+}
+
+/* ville */
+.container p {
+  font-size: 14px;
+  margin-top: -7px;
+  margin-left: 1px;
+  margin-bottom: 10px;
+  padding-bottom: 0;
+  color: #181818;
+}
+
+/* info Nouveau encadré */
+#section3 .Tcard .link-restaurants .status {
+  position: absolute;
+  text-align: center;
+  color: #34a98c;
+  background-color: #99e2d0;
+  top: 5px;
+  right: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 4px;
+}
+
+/* Coeur */
+#section3 .Tcard .coeur {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  right: 5%;
+  bottom: 10%;
+  align-items: center;
+  justify-content: flex-end;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/** bouton : Commander **/
+.commander {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.commander .commander-input {
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 32px;
+  padding: 18px 40px;
+  color: white;
+  font-size: 18px;
+  border: none;
+  box-shadow: 4px 6px 8px #9e9b9b;
+  filter: brightness(100%);
+  cursor: pointer;
+}
+.commander .commander-input:hover {
+  box-shadow: 4px 6px 8px #424040;
+  filter: brightness(110%);
+  cursor: pointer;
+  transition: all 500ms;
+  transform: scale(1.05);
+}
+
+/************************ Debut Footer COMMUN AUX 2 PAGES ****************/
+footer {
+  background-color: #2d2b2b;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding-left: 16px;
+  font-size: 14px;
+  position: relative;
+  bottom: 0;
+}
+
+footer #footer_container {
+  font-family: "Shrikhand", cursive;
+  font-size: 22px;
+}
+
+footer #proposer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: -16px;
+}
+
+footer #proposer:hover {
+  color: #FF79DA;
+}
+
+footer #partenaire {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: -16px;
+}
+
+footer #partenaire:hover {
+  color: #FF79DA;
+}
+
+footer #juridique {
+  margin-bottom: 4px;
+}
+
+footer #juridique:hover {
+  color: #FF79DA;
+}
+
+footer #contact {
+  margin-bottom: 40px;
+  text-decoration: none;
+  margin-top: 8px;
+  color: white;
+}
+
+footer #contact:hover {
+  color: #FF79DA;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/************************ Fin Footer COMMUN AUX 2 PAGES ****************/
+/************************ Fin Footer COMMUN AUX 2 PAGES ****************/
+/*********************************************************************/
+/****************** MEDIA QUERIES TABLETTE ***************************/
+/*********************************************************************/
+@media (min-width: 768px) and (max-width: 920px) {
+  body {
+    max-width: 920px;
+    font-family: "Roboto", "sans-serif";
+    color: #000000;
+    margin: auto;
+    position: relative;
+  }
+
+  main {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  /****************** PAGE ACCUEIL***************/
+  /*** Fonctionnement ***/
+  #section2 ul {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    height: 95%;
+    width: 90%;
+    margin: auto;
+  }
+
+  #section2 li {
+    margin-left: 30px;
+  }
+
+  #section2 ul .fonct {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+
+  #section2 span {
+    position: unset;
+  }
+
+  /*** Restaurant ***/
+  #section3 {
+    width: 100%;
+    height: 100%;
+  }
+
+  /*** Footer ***/
+  footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+  }
+
+  footer #proposer {
+    margin: auto;
+  }
+
+  footer #partenaire {
+    margin: auto;
+  }
+
+  footer #juridique {
+    margin: auto;
+  }
+
+  footer #contact {
+    margin: auto;
+  }
+
+  /****************** PAGE MENUS ***************/
+  .commander .commander-input {
+    width: 100%;
+    margin: 10px;
+    cursor: pointer;
+  }
+
+  footer #proposer {
+    margin: auto;
+  }
+
+  footer #partenaire {
+    margin: auto;
+  }
+
+  footer #juridique {
+    margin: auto;
+  }
+
+  footer #contact {
+    margin: auto;
+  }
+}
+/*********************************************************************/
+/****************** MEDIA QUERIES DESKTOP ****************************/
+/*********************************************************************/
+@media (min-width: 920px) and (max-width: 1400px) {
+  body {
+    max-width: 1400px;
+    font-family: "Roboto", "sans-serif";
+    color: #000000;
+    margin: auto;
+    position: relative;
+  }
+
+  main {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  /****************** PAGE ACCUEIL***************/
+  /*** Fonctionnement ***/
+  #section2 ul {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    height: 95%;
+    width: 90%;
+    margin: auto;
+  }
+
+  #section2 li {
+    margin-left: 30px;
+  }
+
+  #section2 ul .fonct {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+
+  #section2 span {
+    position: unset;
+  }
+
+  /*** Restaurant ***/
+  #section3 {
+    width: 100%;
+    height: 100%;
+  }
+
+  #section3 .Restaurants-tous {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 95%;
+    width: 90%;
+    margin: auto;
+  }
+
+  /*** Footer ***/
+  footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+  }
+
+  footer #proposer {
+    margin: auto;
+  }
+
+  footer #partenaire {
+    margin: auto;
+  }
+
+  footer #juridique {
+    margin: auto;
+  }
+
+  footer #contact {
+    margin: auto;
+  }
+
+  /****************** PAGE MENUS ***************/
+  .commander .commander-input {
+    width: 100%;
+    border-radius: 0px;
+  }
+
+  footer #proposer {
+    margin: auto;
+  }
+
+  footer #partenaire {
+    margin: auto;
+  }
+
+  footer #juridique {
+    margin: auto;
+  }
+
+  footer #contact {
+    margin: auto;
+  }
+}
+/********************* P A G E  D E S  M E N U S *********************/
+/************************ Les Menus ****************************/
+/** restaurant & coeur **/
+#tous-les-menus {
+  background-color: #f3f3f3;
+  position: relative;
+  width: 100%;
+  border-radius: 40px 40px 0 0;
+  padding-bottom: 64px;
+  margin-top: -90px;
+}
+
+#tous-les-menus #titre-restaurant {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "shrikhand", cursive;
+  font-size: 20px;
+  font-style: italic;
+  margin-left: 10px;
+  margin-right: 50px;
+}
+
+#tous-les-menus #titre-restaurant .coeur {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  right: 10%;
+  top: 2.5%;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+/** ENTREES PLATS DESSERTS**/
+.ligne-verte {
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-top: 8px;
+}
+
+.ligne-verte h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.ligne-verte::after {
+  content: "";
+  width: 47px;
+  height: 8px;
+  background-color: #99e2d0;
+  position: absolute;
+  margin: 0;
+}
+
+/** Nom des Plats **/
+#tous-les-menus .selection {
+  background-color: white;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.25);
+  margin: 10px;
+  border-radius: 16px;
+  cursor: pointer;
+  height: 90px;
+}
+
+#tous-les-menus .prix {
+  font-weight: bold;
+}
+
+/*@import "../sass/layout/mqueridesktop.scss"; */
+
+/*# sourceMappingURL=style.css.map */
